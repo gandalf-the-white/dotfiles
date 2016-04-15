@@ -1,0 +1,8 @@
+PATH=/bin:/usr/bin
+MAILDIR=$HOME/Maildir/
+DEFAULT=$MAILDIR
+LOGFILE=$HOME/.getmail/procmail.log
+SHELL=/bin/bash
+
+:0 w
+$MAILDIR/default

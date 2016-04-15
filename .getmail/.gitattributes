@@ -1,0 +1,2 @@
+getmail.* filter=remove-pass
+getmail.* filter=rename-user

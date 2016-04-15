@@ -1,2 +1,1 @@
-getmail.* filter=remove-pass
-getmail.* filter=rename-user
+getmail.* filter=remove-pass filter=rename-user

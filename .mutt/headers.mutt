@@ -1,0 +1,15 @@
+set hdrs
+ignore *
+unignore From:
+unignore To:
+unignore Subject:
+unignore Date:
+unignore Organization:
+unignore Newsgroups:
+unignore CC:
+unignore BCC:
+unignore X-Mailer:
+unignore User-Agent:
+unignore Message-ID:
+unignore X-Junked-Because:
+

@@ -2,7 +2,7 @@
 type = SimpleIMAPSSLRetriever
 server = imap.gmail.com
 mailboxes = ("Inbox", "[Gmail]/Sent Mail") # optional - leave this line out to just grab inbox
-username = spike@trantor.net
+username = spikeandfaye@trantor.net
 password = mypass
 #mailboxes = ("[Gmail]/All Mail",)
 port = 993

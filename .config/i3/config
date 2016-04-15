@@ -173,7 +173,7 @@ bar {
 
 exec xautolock -time 15 -locker '~/.config/i3/fuzzy_lock.sh' &
 #exec --no-startup-id feh --bg-scale ~/Pictures/7044_ghost_in_the_shell.jpg
-exec --no-startup-id feh --bg-scale ~/Pictures/7684_ghost_in_the_shell.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/7684_ghost_in_the_shell.jpg --bg-scale ~/Pictures/7044_ghost_in_the_shell.jpg
 #exec --no-startup-id unclutter -idle 2
 
 # amixer

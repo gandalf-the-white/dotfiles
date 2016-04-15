@@ -1,0 +1,2 @@
+.msmtprc filter=remove-pass
+.msmtprc filter=rename-user

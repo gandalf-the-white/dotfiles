@@ -1,1 +1,2 @@
 .msmtprc filter=remove-pass filter=rename-user
+.getmail/getmail.gmail filter=remove-pass filter=rename-user

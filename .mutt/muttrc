@@ -3,26 +3,28 @@ source ~/.mutt/mailboxes.mutt
 source ~/.mutt/headers.mutt
 source ~/.mutt/aliases.mutt
 
-set from = "spike@trantor.net"
+set from = "spike@gmail.com"
 set realname = "spike spiegel"
 set use_from = "yes"
 set envelope_from = "yes"
 
 set charset=utf-8
 
-set record="$HOME/Maildir/sent"
 set include=yes
 
 set sendmail="/usr/bin/msmtp"
 
-set spoolfile  = $HOME/Maildir/default
-set folder     = $HOME/Maildir
-set postponed  = $HOME/Maildir/postponed
+set mbox_type=Maildir
+#set spoolfile  = $HOME/Maildir/default
+set folder     = "~/Maildir/""
+set spoolfile  = "~/Maildir/Gmail/"
+set record     = "+.sent"
+set postponed  = "+.Drafts"
 
 macro index,pager A ":set confirmappend=no delete=yes\n<tag-prefix><save-message>"
 
-#set signature="fortune -n 200 -s |"
-set signature="~/.mutt/scripts/signature.mutt"
+set signature="fortune -n 200 -s |"
+#set signature="~/.mutt/scripts/signature.mutt"
 
 set date_format="%y-%m-%d %T"
 set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"

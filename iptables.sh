@@ -10,8 +10,8 @@ fw_start() {
    iptables -t filter -A INPUT -i lo -j ACCEPT
    iptables -t filter -A OUTPUT -o lo -j ACCEPT
 
-   #iptables -t filter -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-   #iptables -t filter -A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+   iptables -t filter -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+   iptables -t filter -A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
    ### SNMP SERVICE
    iptables -t filter -A INPUT -p icmp -j DROP
@@ -21,8 +21,8 @@ fw_start() {
    #iptables -A OUTPUT -p tcp -m tcp --dport 3306 -j ACCEPT
 
    ### SSH
-   iptables -t filter -A OUTPUT -o wlp12s0 -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
-   iptables -t filter -A INPUT -i wlp12s0 -s 192.168.0.0/24 -p tcp -m tcp --sport 1984 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+   iptables -t filter -A OUTPUT -o wlp12s0 -p tcp -m tcp --dport 22 -j ACCEPT
+   iptables -t filter -A INPUT -i wlp12s0 -p tcp  --dport 1984 -j ACCEPT
 
    ### HTTP HTTPS
    iptables -t filter -A OUTPUT -p tcp -m multiport --dports 80,443,8000 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT

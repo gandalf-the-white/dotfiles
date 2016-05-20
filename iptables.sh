@@ -26,7 +26,8 @@ fw_start() {
 
    ### HTTP HTTPS
    iptables -t filter -A OUTPUT -p tcp -m multiport --dports 80,443,8000 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
-   iptables -t filter -A INPUT -p tcp -m multiport --sports 80,443,8000 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+   #iptables -t filter -A INPUT -p tcp -m multiport --sports 80,443,8000 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
+   iptables -t filter -A INPUT -p tcp -m multiport --dports 80,443,8000 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
 
    ### DHCP
    #iptables -A INPUT -i eth0 -p udp --sport 67 --dport 68 -j ACCEPT

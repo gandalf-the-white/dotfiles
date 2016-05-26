@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#http://ubuntuforums.org/showthread.php?t=159661
+
 fw_start() {
    fw_clear
 
@@ -15,7 +17,7 @@ fw_start() {
 
    ### SNMP SERVICE
    iptables -t filter -A INPUT -p icmp -j DROP
-   iptables -t filter -A INPUT -p icmp -j DROP
+   iptables -t filter -A OUTPUT -p icmp -j ACCEPT
 
    ### MYSQL
    #iptables -A OUTPUT -p tcp -m tcp --dport 3306 -j ACCEPT
@@ -28,6 +30,8 @@ fw_start() {
    iptables -t filter -A OUTPUT -p tcp -m multiport --dports 80,443,8000 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
    #iptables -t filter -A INPUT -p tcp -m multiport --sports 80,443,8000 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
    iptables -t filter -A INPUT -p tcp -m multiport --dports 80,443,8000 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j ACCEPT
+   #iptables -A INPUT -i eth0 -p tcp -m tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT 
+   #iptables -A OUTPUT -o eth0 -p tcp -m tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
 
    ### DHCP
    #iptables -A INPUT -i eth0 -p udp --sport 67 --dport 68 -j ACCEPT
@@ -57,6 +61,8 @@ fw_start() {
    
    ### MESSENGER
    #iptables -A OUTPUT -p tcp -m tcp --dport 5060:5061 -j ACCEPT
+   #iptables -A INPUT -p tcp -m tcp --sport 6667 -j ACCEPT
+   #iptables -A OUTPUT -p tcp -m tcp --dport 6667 -j ACCEPT
 
    ### IP DENIED
    #iptables -A INPUT -s 192.168.0.200 -j DROP

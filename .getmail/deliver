@@ -1,0 +1,22 @@
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = imap.gmail.com
+username = spikeandfaye@gmail.com
+password = XXXX
+mailboxes = ("Inbox",)
+port = 993
+
+[destination]
+type = MDA_external
+path = /usr/lib/dovecot/deliver
+arguments = ("-e", "-f", "%(sender)", "-d", "spike")
+user = vmail
+group = vmail
+
+[options]
+received = false
+delivered_to = false
+read_all = false
+verbose = 2
+message_log = deliver.log
+message_log_verbose = true

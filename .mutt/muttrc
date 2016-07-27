@@ -1,34 +1,46 @@
 source ~/.mutt/themes/solarized-light-256.mutt
-source ~/.mutt/mailboxes.mutt
 source ~/.mutt/headers.mutt
 source ~/.mutt/aliases.mutt
+source ~/.mutt/sidebar.mutt
+source ~/.mutt/mailboxes
 
-set from = "spike@gmail.com"
-set realname = "spike spiegel"
-set use_from = "yes"
+set shell         = "/bin/bash"
+set from          = "XXXX"
+set realname      = "XXXX"
+set use_from      = "yes"
 set envelope_from = "yes"
 
-set charset=utf-8
+set charset       = utf-8
+set send_charset  ="utf-8" 
 
-set include=yes
+set include = yes
+set editor  = vim
+set sendmail= "/usr/bin/msmtp"
 
-set sendmail="/usr/bin/msmtp"
+set mbox_type  = Maildir
+set folder     = "~/Mail/"
+set spoolfile  = "+Inbox"
+set record     = "+Sent"
+set postponed  = "+Drafts"
 
-set mbox_type=Maildir
-#set spoolfile  = $HOME/Maildir/default
-set folder     = "~/Maildir/""
-set spoolfile  = "~/Maildir/Gmail/"
-set record     = "+.sent"
-set postponed  = "+.Drafts"
+auto_view text/html
+alternative_order text/plain text/html
+
 
 macro index,pager A ":set confirmappend=no delete=yes\n<tag-prefix><save-message>"
 
-set signature="fortune -n 200 -s |"
-#set signature="~/.mutt/scripts/signature.mutt"
+set pager_index_lines=20
+set pager_stop
+
+#set signature="fortune -n 200 -s |"
+set signature="~/.mutt/scripts/signature|"
 
 set date_format="%y-%m-%d %T"
 set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"
 
-set alias_file = "~/.aliases"
-set sort_alias = alias
+set sort_alias    = alias
 set reverse_alias = yes
+
+set sort=threads
+set sort_browser=date
+set sort_aux=reverse-last-date-received

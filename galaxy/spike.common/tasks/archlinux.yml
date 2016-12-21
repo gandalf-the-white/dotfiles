@@ -1,0 +1,9 @@
+# vim:ft=ansible:
+---
+# tasks file for spike.common
+- name: Update System
+  pacman: 
+    update_cache: yes
+    upgrade: yes
+  environment:
+    http_proxy: http://proxy.rd.francetelecom.fr:8080

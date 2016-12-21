@@ -1,0 +1,11 @@
+# vim:ft=ansible:
+#
+---
+# Setup Upgrade
+- include: debian.yml
+  when: ansible_os_family == 'Debian'
+  static: no
+
+- include: archlinux.yml
+  when: ansible_os_family == 'Archlinux'
+  static: no

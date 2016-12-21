@@ -1,0 +1,6 @@
+# vim:ft=ansible:
+#
+- hosts: all
+  sudo: true
+  roles:
+    - spike.common

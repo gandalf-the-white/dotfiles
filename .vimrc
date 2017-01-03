@@ -13,6 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 "My Plugins here:
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'pangloss/vim-javascript'
@@ -63,16 +65,19 @@ let g:SimpylFold_docstring_preview = 1
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+
 set t_Co=256
 
 " Solarized
 syntax enable
 set number
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_visibility= "high"
-let g:solarized_contrast = "high"
+" let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
+" let g:solarized_visibility= "high"
+" let g:solarized_contrast = "high"
 
 colorscheme zenburn
 

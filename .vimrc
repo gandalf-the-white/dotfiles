@@ -13,6 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 "My Plugins here:
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'pangloss/vim-javascript'
@@ -86,6 +88,7 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+=======
 
 set t_Co=256
 
@@ -93,10 +96,10 @@ set t_Co=256
 syntax enable
 set number
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_visibility= "high"
-let g:solarized_contrast = "high"
+" let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
+" let g:solarized_visibility= "high"
+" let g:solarized_contrast = "high"
 
 colorscheme zenburn
 

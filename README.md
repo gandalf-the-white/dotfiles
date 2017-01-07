@@ -8,6 +8,7 @@ This document describes the installation of main important softwares on my compu
 - weechat and bitlbee to connect on the sipe internal server
 - many simple tools ....
 - and my home environment
+- fine
 
 ## Dovecot
 ### Simple install

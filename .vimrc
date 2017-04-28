@@ -1,3 +1,5 @@
+"$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 set et sw=3 sts=3 
 
 set nocompatible              " be iMproved, required

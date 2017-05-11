@@ -3,3 +3,5 @@
 [user]
 	email = spikeandfaye@gmail.com
 	name = Spike Spiegel
+[core]
+	editor = /usr/bin/vim

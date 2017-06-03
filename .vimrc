@@ -1,6 +1,6 @@
 "$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-set et sw=3 sts=3 
+set et sw=4 sts=4 
 
 set nocompatible              " be iMproved, required
 filetype off                  " required

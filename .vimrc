@@ -32,6 +32,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/awk.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

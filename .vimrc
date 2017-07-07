@@ -93,6 +93,11 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 set t_Co=256
 
+if $COLORTERM == 'gnome-terminal'
+   set t_Co=256                                                                                                                                                                                                        
+endif                                                                                                                                                                                                                                     
+set t_ut= 
+
 " Solarized
 syntax enable
 set number

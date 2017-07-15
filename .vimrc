@@ -2,6 +2,7 @@
 
 set et sw=4 sts=4 
 
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 

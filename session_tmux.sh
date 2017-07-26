@@ -1,5 +1,7 @@
 #!/bin/sh 
 
+# To put in the .local/bin directory
+
 eval `ssh-agent`
 ssh-add ~/.ssh/id_rsa
 

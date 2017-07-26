@@ -108,5 +108,10 @@ set background=dark
 " let g:solarized_visibility= "high"
 " let g:solarized_contrast = "high"
 
+set list
+set listchars=tab:>-,trail:-,extends:#,nbsp:-
+set modeline
+set tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
 colorscheme zenburn
 

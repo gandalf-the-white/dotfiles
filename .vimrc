@@ -28,13 +28,14 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'jnurmine/Zenburn'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/awk.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

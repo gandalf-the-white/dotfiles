@@ -1,7 +1,5 @@
 "$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-set et sw=4 sts=4 
-
 set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -115,6 +113,8 @@ set list
 set listchars=tab:>-,trail:-,extends:#,nbsp:-
 set modeline
 set tabstop=8 expandtab shiftwidth=4 softtabstop=4
+" set et sw=4 sts=4 
+
 
 colorscheme zenburn
 

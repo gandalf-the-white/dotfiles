@@ -42,7 +42,8 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 
-"Leader
+" Leader
+" We redefine the key leader
 :let mapleader = ";"
 
 "NERDTree

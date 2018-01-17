@@ -28,9 +28,16 @@ URxvt*background:                      grey15
 URxvt*saveLines:                       7777
 URxvt*cursorBlink:                     false
 URxvt*termName:                        rxvt-256color
-URxvt*font:                            xft:Dejavu Sans Mono:pixelsize=10.5
-URxvt*boldFont:                        xft:Dejavu Sans Mono:pixelsize=10.5
-URxvt.letterSpace:                     -2
+!URxvt*font:             xft:DejaVu Sans Mono for Powerline:regular:size=8
+!URxvt*imFont:           xft:DejaVu Sans Mono for Powerline:regular:size=8
+!URxvt*boldFont:         xft:DejaVu Sans Mono for Powerline:regular:size=8
+!URxvt*italicFont:       xft:DejaVu Sans Mono for Powerline:size=8
+!URxvt*boldItalicFont:   xft:DejaVu Sans Mono for Powerline:italic:size=8
+!URxvt*utf8:             2
+!URxvt*dynamicColors:    true
+URxvt*font:                            xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont:                        xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.letterSpace:                     -1
 URxvt*colorBD:                         #FFB700
 URxvt*transparent:                     true
 URxvt*shading:                         33

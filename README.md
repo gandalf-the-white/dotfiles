@@ -180,5 +180,13 @@ mailboxes +bebop.linuxsupport
 ## IM messenger
 I propose to use the couple weechat/bitlbee, weechat for the simplicity and bitlbee to adapt multi protocols.
 
+# Suspend with Debian
+* To test the *suspend* mode
+systemctl suspend
+* Verify if the computer set up the *suspend*. /etc/systemd/logind.conf
+```
+HandleLidSwitch=suspend
+HandleLidSwitchDocked=suspend
+```
 
 [ref01]: <https://wiki.archlinux.org/index.php/Virtual_user_mail_system>

@@ -12,6 +12,8 @@
 (add-to-list 'load-path "~/.emacs.d/perso/")
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+;; https://raw.githubusercontent.com/yoshiki/yaml-mode/master/yaml-mode.el
+;; To save in ~/.emacs.d/perso/
 
 (add-hook 'yaml-mode-hook
           '(lambda ()

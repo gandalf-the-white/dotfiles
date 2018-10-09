@@ -21,7 +21,7 @@
 (setq LaTeX-command-style '(("" "%(PDF)%(latex) -shell-escape %S%(PDFout)")))
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
-(setq-default TeX-master "nil")
+(setq-default TeX-master nil)
 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))

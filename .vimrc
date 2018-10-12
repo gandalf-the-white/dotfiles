@@ -32,6 +32,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/awk.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -97,6 +100,18 @@ if $COLORTERM == 'gnome-terminal'
    set t_Co=256                                                                                                                                                                                                        
 endif                                                                                                                                                                                                                                     
 set t_ut= 
+
+" YouCompleteMe
+" brew install cmake
+" cd .vim/bundle/YouCompleteMe/
+" ./install.py --clang-completer
+" Start autocompletion after 4 chars
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
+" Don't show YCM's preview window [ I find it really annoying ]
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
 " Solarized
 syntax enable

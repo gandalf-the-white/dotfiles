@@ -69,6 +69,7 @@ let g:SimpylFold_docstring_preview = 1
 " TagBar
 " nmap <F8> :TagbarToggle<CR>
 " we select '; l' to toggle the tagbar
+" brew install ctags
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 

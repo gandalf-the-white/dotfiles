@@ -105,7 +105,7 @@ set t_ut=
 " YouCompleteMe
 " brew install cmake
 " cd .vim/bundle/YouCompleteMe/
-" ./install.py --clang-completer
+" ./install.py --clang-completer --js-completer
 " Start autocompletion after 4 chars
 let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_min_num_identifier_candidate_chars = 4

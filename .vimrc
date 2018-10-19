@@ -33,7 +33,7 @@ Plugin 'vim-scripts/awk.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'drewtempelmeyer/palenight.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -130,5 +130,8 @@ set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 " set et sw=4 sts=4 
 
 
-colorscheme zenburn
+" colorscheme zenburn
+colorscheme palenight
 
+" Italics for my favorite color scheme
+let g:palenight_terminal_italics=1

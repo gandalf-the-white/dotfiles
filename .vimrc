@@ -1,4 +1,6 @@
 "$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"YouCompleteMe (golang)
+"https://github.com/Valloric/YouCompleteMe/issues/3074
 
 set encoding=utf-8
 set nocompatible              " be iMproved, required

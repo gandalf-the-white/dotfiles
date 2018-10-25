@@ -126,7 +126,13 @@ set background=dark
 " let g:solarized_contrast = "high"
 
 set list
-set listchars=tab:>-,trail:-,extends:#,nbsp:-
+" set listchars=tab:>-,trail:-,extends:#,nbsp:-
+" set list lcs=trail:·,tab:»·
+" set listchars=tab:→\ ,trail:·,precedes:«,extends:»,eol:¶
+" set listchars=tab:→\ ,trail:␣,extends:…,eol:⏎
+" set listchars=tab:‣\ ,trail:·,precedes:«,extends:»,eol:¬
+" set listchars=tab:>-,trail:.,precedes:<,extends:>,eol:$
+set listchars=tab:‣-,trail:.,precedes:<,extends:>,eol:⏎
 set modeline
 set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 " set et sw=4 sts=4 

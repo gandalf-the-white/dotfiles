@@ -36,6 +36,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'drewtempelmeyer/palenight.vim'
+Plugin 'xuhdev/vim-latex-live-preview'
 
 
 " All of your Plugins must be added before the following line
@@ -115,6 +116,10 @@ let g:ycm_enable_diagnostic_highlighting = 0
 " Don't show YCM's preview window [ I find it really annoying ]
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
+
+autocmd Filetype tex setl updatetime=1⏎
+" let g:livepreview_previewer = 'open -a Preview'⏎
+let g:livepreview_previewer = 'open -a Skim'⏎
 
 " Solarized
 syntax enable

@@ -2,6 +2,7 @@
 "YouCompleteMe (golang)
 "https://github.com/Valloric/YouCompleteMe/issues/3074
 
+
 set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -15,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 "My Plugins here:
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -23,8 +25,9 @@ Plugin 'Lokaltog/vim-distinguished'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
-Plugin 'moll/vim-node'
-Plugin 'chase/vim-ansible-yaml'
+" Plugin 'moll/vim-node'
+" Plugin 'chase/vim-ansible-yaml'
+Plugin 'mrk21/yaml-vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'jnurmine/Zenburn'
 Plugin 'majutsushi/tagbar'
@@ -35,9 +38,9 @@ Plugin 'vim-scripts/awk.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
+" Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -49,10 +52,13 @@ filetype plugin indent on    " required
 :let mapleader = ";"
 
 "NERDTree
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
+map <leader>f :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 "NERDCommenter
 let g:NERDSpaceDelims = 1
+let NERDTreeQuitOnOpen = 1
 
 "Delimiter
 imap <C-c> <CR><Esc>O
@@ -72,7 +78,6 @@ let g:SimpylFold_docstring_preview = 1
 " TagBar
 " nmap <F8> :TagbarToggle<CR>
 " we select '; l' to toggle the tagbar
-" brew install ctags
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
@@ -82,7 +87,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
-   let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 
 let g:airline_left_sep = '»'
@@ -101,14 +106,12 @@ let g:airline_symbols.whitespace = 'Ξ'
 set t_Co=256
 
 if $COLORTERM == 'gnome-terminal'
-   set t_Co=256                                                                                                                                                                                                        
-endif                                                                                                                                                                                                                                     
-set t_ut= 
+    set t_Co=256
+endif
+set t_ut=
+
 
 " YouCompleteMe
-" brew install cmake
-" cd .vim/bundle/YouCompleteMe/
-" ./install.py --clang-completer --js-completer
 " Start autocompletion after 4 chars
 let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_min_num_identifier_candidate_chars = 4
@@ -117,10 +120,18 @@ let g:ycm_enable_diagnostic_highlighting = 0
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
-autocmd Filetype tex setl updatetime=1⏎
-" let g:livepreview_previewer = 'open -a Preview'⏎
-let g:livepreview_previewer = 'open -a Skim'⏎
-
+autocmd Filetype tex setl updatetime=1
+" let g:livepreview_previewer = 'open -a Preview'
+let g:tex_flavor='latex'
+let g:Tex_TreatMacViewerAsUNIX = 1
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1 --interaction=nonstopmode $*'
+" let g:Tex_ViewRule_pdf='open -a Skim'
+let g:livepreview_previewer = 'open -a Skim'
+"
+" Yaml
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " Solarized
 syntax enable
 set number
@@ -139,8 +150,8 @@ set list
 " set listchars=tab:>-,trail:.,precedes:<,extends:>,eol:$
 set listchars=tab:‣-,trail:.,precedes:<,extends:>,eol:⏎
 set modeline
-set tabstop=8 expandtab shiftwidth=4 softtabstop=4
-" set et sw=4 sts=4 
+set tabstop=4 expandtab shiftwidth=4 softtabstop=4
+" set et sw=4 sts=4
 
 
 " colorscheme zenburn

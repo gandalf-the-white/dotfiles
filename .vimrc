@@ -41,6 +41,7 @@ Plugin 'Valloric/YouCompleteMe'
 " Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -153,6 +154,12 @@ set modeline
 set tabstop=4 expandtab shiftwidth=4 softtabstop=4
 " set et sw=4 sts=4
 
+" Indentline
+let g:indentLine_setColors = 1
+" let g:indentLine_color_term = 239
+let g:indentLine_char = '│'
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 2
 
 " colorscheme zenburn
 colorscheme palenight

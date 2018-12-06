@@ -157,7 +157,8 @@ set tabstop=4 expandtab shiftwidth=4 softtabstop=4
 " Indentline
 let g:indentLine_setColors = 1
 " let g:indentLine_color_term = 239
-let g:indentLine_char = '│'
+" let g:indentLine_char = '│'
+let g:indentLine_char = '┊'
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 

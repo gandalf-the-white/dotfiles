@@ -123,7 +123,7 @@ set t_ut=
 
 
 " NeoComplete
-set completeopt-=preview
+" set completeopt-=preview
 " Disable AutoComplPop.
  let g:acp_enableAtStartup = 0
  " Use neocomplete.
@@ -158,6 +158,11 @@ set completeopt-=preview
  au FileType go nmap <Leader>b <Plug>(go-build)
  au FileType go nmap <Leader>t <Plug>(go-test)
  au FileType go nmap gd <Plug>(go-def-tab)
+
+" Golint is a linter for Go source code.
+" go get -u golang.org/x/lint/golint
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " YouCompleteMe
 " Start autocompletion after 4 chars

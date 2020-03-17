@@ -1,0 +1,92 @@
+" mkdir -p .vim/autoload
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+set encoding=utf-8
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+
+Plug 'jnurmine/Zenburn'
+Plug 'drewtempelmeyer/palenight.vim'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'Yggdroot/indentLine'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+" Leader
+" We redefine the key leader
+:let mapleader = "w"
+
+"NERDTree
+" map <C-n> :NERDTreeToggle<CR>
+map <leader>f :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+
+"NERDCommenter
+let g:NERDSpaceDelims = 1
+let NERDTreeQuitOnOpen = 1
+
+"Delimiter
+imap <C-c> <CR><Esc>O
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+" let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" Indentline
+let g:indentLine_setColors = 1
+" let g:indentLine_color_term = 239
+" let g:indentLine_char = '│'
+let g:indentLine_char = '┊'
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 2
+
+set list
+set listchars=tab:‣-,trail:.,precedes:<,extends:>,eol:⏎
+set modeline
+set tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
+" Highlight matching search patterns
+set hlsearch
+" Enable incremental search
+set incsearch
+" Include matching uppercase words with lowercase search term
+set ignorecase
+" Include only uppercase words with uppercase search term
+set smartcase
+
+set number
+
+" colorscheme zenburn
+set background=dark
+colorscheme palenight

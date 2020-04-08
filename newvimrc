@@ -1,6 +1,9 @@
 " mkdir -p .vim/autoload
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+" To install vim-go⏎
+" :GoInstallBinaries⏎
+
 set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -21,12 +24,17 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'Yggdroot/indentLine'
 
+Plug 'fatih/vim-go'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+" vim-go⏎
+filetype plugin indent on⏎
+set backspace=indent,eol,start
+
 " Leader
 " We redefine the key leader
-:let mapleader = "w"
+:let mapleader = ";"
 
 "NERDTree
 " map <C-n> :NERDTreeToggle<CR>
@@ -87,6 +95,6 @@ set smartcase
 
 set number
 
-" colorscheme zenburn
 set background=dark
-colorscheme palenight
+" colorscheme palenight
+colorscheme zenburn

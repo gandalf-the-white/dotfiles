@@ -29,8 +29,8 @@ Plug 'fatih/vim-go'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-" vim-go⏎
-filetype plugin indent on⏎
+" vim-go
+filetype plugin indent on
 set backspace=indent,eol,start
 
 " Leader
